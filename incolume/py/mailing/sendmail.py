@@ -21,16 +21,17 @@ host, port, user, pwd, sender, reciver, subject = (
 logging.debug('%s %s %s %s %s', host, port, user, sender, reciver, subject)
 
 
-with smtplib.SMTP(host=host, port=port) as server:
-    server.ehlo()
-    server.starttls()
-    server.login(user, pwd)
+server = smtplib.SMTP(host=host, port=port)
+server.ehlo()
+server.starttls()
+server.login(user, pwd)
 
-    email_msg = MIMEMultipart()
-    email_msg['To'] = reciver
-    email_msg['From'] = sender
-    email_msg['Subject'] = subject
-    content = 'conteúdo do email'
-    email_msg.attach(MIMEText(content, 'plain'))
+email_msg = MIMEMultipart()
+email_msg['To'] = reciver
+email_msg['From'] = sender
+email_msg['Subject'] = subject
+content = 'conteúdo do email'
+email_msg.attach(MIMEText(content, 'plain'))
 
-    server.sendmail(email_msg['From'], email_msg['To'], email_msg.as_string())
+server.sendmail(email_msg['From'], email_msg['To'], email_msg.as_string())
+server.quit()
