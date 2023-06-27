@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "incolume-py-mailing"
-version = "1.0.0a1"
+version = "1.0.0a2"
 description = "Ferramenta para envio de mailing"
 authors = ["Britodfbr <britodfbr@gmail.com>"]
 license = "GPL3"
