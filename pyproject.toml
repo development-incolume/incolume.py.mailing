@@ -101,7 +101,7 @@ directory = "coverage_report/html"
 
 [tool.coverage.run]
 omit = [
-  # omit anything in a .local directory anywhere
+  # omit anything in a .local utils anywhere
   "*/.local/*",
   # omit everything in /usr
   "/usr/*",
