@@ -20,7 +20,9 @@ def get_email(entrance_file: Path | str,
 
 
 def run():
-    for i in get_email('mailing01.txt'):
+    # for i in get_email('mailing01.txt'):
+    #     print(i)
+    for i in enumerate(get_email('mailing02.txt')):
         print(i)
 
 
