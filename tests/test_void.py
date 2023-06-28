@@ -2,8 +2,6 @@
 
 import pytest
 
-__author__ = 'mdias'
-
 
 def test_void(capsys):
     """Test void."""
@@ -27,3 +25,5 @@ def test_none(capsys, entrance):
     print(entrance)
     out, err = capsys.readouterr()
     assert out.strip() == entrance
+
+
