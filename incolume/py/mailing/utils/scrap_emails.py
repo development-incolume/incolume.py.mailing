@@ -20,13 +20,15 @@ def get_email(entrance_file: Path | str,
 
 
 def run():
+    seq = False
     result = (get_email('../datas/mailing01.txt')
               + get_email('../datas/mailing02.txt')
+              + get_email('../datas/mailing03.txt')
     )
     result = [email.casefold() for email in result]
     result = sorted(list(set(result)))
     for i, email in enumerate(result, start=1):
-        print(f'{i:3} {email}')
+        print(f'{i:3} {email}' if seq else email)
 
 
 if __name__ == '__main__':
