@@ -6,7 +6,7 @@ import logging
 __author__ = "@britodfbr"  # pragma: no cover
 
 
-def send_gmail(
+def send_mail(
     smtp_user: str,
     smtp_pwd: str,
     smtp_server: str = None,
