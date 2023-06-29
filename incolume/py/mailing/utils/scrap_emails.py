@@ -21,9 +21,12 @@ def get_email(entrance_file: Path | str,
 
 def run():
     seq = False
-    result = (get_email('../datas/mailing01.txt')
-              + get_email('../datas/mailing02.txt')
-              + get_email('../datas/mailing03.txt')
+    result = (
+        []
+        + get_email('../datas/mailing01.txt')
+        + get_email('../datas/mailing02.txt')
+        + get_email('../datas/mailing03.txt')
+        + get_email('../datas/mailing04.txt')
     )
     result = [email.casefold() for email in result]
     result = sorted(list(set(result)))
