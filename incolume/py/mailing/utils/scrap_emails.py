@@ -27,6 +27,7 @@ def run():
         + get_email('../datas/mailing02.txt')
         + get_email('../datas/mailing03.txt')
         + get_email('../datas/mailing04.txt')
+        + get_email('../datas/mailing05.txt')
     )
     result = [email.casefold() for email in result]
     result = sorted(list(set(result)))
